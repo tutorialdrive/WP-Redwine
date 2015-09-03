@@ -3,7 +3,7 @@
   <div class="container">
     <div class="menu-wrap">
       <nav class="menu-top">
-        <!-- <div class="profile"><img src="img/user1.png" alt="John Doe"/><span>John Doe</span></div> -->
+        <div class="profile"><img src="img/user1.png" alt="John Doe"/><span>John Doe</span></div>
         <div class="icon-list">
           <a href="#"><i class="fa fa-fw fa-star-o"></i></a>
           <a href="#"><i class="fa fa-fw fa-bell-o"></i></a>
