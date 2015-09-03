@@ -32,24 +32,11 @@
 </header>
 
 <ol class="">
-  <?php
-
-
-  $args = array( 'posts_per_page' => 5 );
-
-  $myposts = get_posts( $args );
-  foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+  
   <li class="post-stub">
-    <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-      <h4 class="post-stub-title"><strong><?php the_title(); ?></strong></h4>
-      <time class="post-stub-date" datetime="2015-06-04 08:08:00-05:00">June 04, 2015</time>
-    <!-- <a title="How do you run distributed standups?" href="/writing/distributed-standups/">
-      <h4 class="post-stub-title">How do you run distributed standups?</h4>
-      <time class="post-stub-date" datetime="2015-06-04 08:08:00-05:00">June 04, 2015</time>
-    </a> -->
+    <?php comments_template( $file, $separate_comments ); ?>
   </li>
-  <?php endforeach; 
-  wp_reset_postdata();?>
+  
   
 </ol>
 </div>

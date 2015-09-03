@@ -1,11 +1,11 @@
 /*
 Theme Name: Redwine - Reading Theme
 Theme URI: http://tutorialdrive.irg/
-Description: Tutorial Drive's Opensource Theme. Idea for reading blogs.
+Description: Tutorial Drive's Opensource Theme. Ideal for reading only stuffs.
 Author: Shivam Pandya
 Author URI: http://iamshivam.com/
 Version: 1.0.0
-Tags: responsive, white, bootstrap, red, free theme, wordpress, shivam, blog
+Tags: white, red, redwine, tutorialdrive, shivam
 
 License: The MIT License (MIT)
 License URI: http://opensource.org/licenses/MIT
@@ -46,3 +46,16 @@ h4 {
 .post-stub-date {
     display: inline-block;
 }
+
+/***********************/
+.wp-caption{}
+.wp-caption-text{}
+.sticky{}
+.screen-reader-text{}
+.gallery-caption{}
+.bypostauthor{}
+.alignright{}
+.alignleft{}
+.aligncenter{}
+
+

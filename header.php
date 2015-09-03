@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!-- <?php echo wp_title(). "::" .get_bloginfo( 'name' )." | ".get_bloginfo( 'description' ); ?> -->
   <title>
-    <?php echo get_bloginfo( 'name' )." | ".get_bloginfo( 'description' ); ?>
+    
+    <?php echo wp_title(); ?>
   </title>
   <meta name="description" content="Red Wine, Responsive Multi Purpose Wordpress Theme" />
   <meta name="keywords" content="red wine, wordpress, free, free theme, wordpress theme, free wordpress theme, sidebar, off-canvas, menu, navigation, effect, inspiration, css transition, SVG, morphing, animation" />

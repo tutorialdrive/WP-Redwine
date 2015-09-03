@@ -24,7 +24,7 @@
   <li class="site-nav-item"><a class="js-ajax-link" title="Contact" href="contact.html">Contact</a></li> -->
 </ul>
 <header class="post-header">
-  <h1 class="post-title"><?php echo get_bloginfo( 'name' ); ?></h1>
+  <h1 class="post-title"><a href="<?php echo get_option('home'); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 
   <!-- <p class="post-date">Published <time datetime="Sat Mar 08 2014 18:51:27 GMT+0530 (UTC)">July 2015</time> <strong>by <a href="#!">John Doe</a></strong></p> -->
 </header>
@@ -33,6 +33,12 @@
   <h3><?php the_title(); ?></h3>
   <?php the_content(); ?>
 <?php endwhile; // end of the loop. ?>
+
+<p class="post-date">Tags: <?php echo get_the_tag_list(); ?></p>
+
+<ul class="commentlist">
+<?php wp_list_comments( 'type=comment&callback=mytheme_comment' ); ?>
+</ul>
 
 
 <footer class="post-footer clearfix">
