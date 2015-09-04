@@ -23,28 +23,23 @@
   <li class="site-nav-item"><a class="js-ajax-link" title="About" href="">About</a></li>
   <li class="site-nav-item"><a class="js-ajax-link" title="Contact" href="contact.html">Contact</a></li> -->
 </ul>
-<header class="post-header">
-  <h1 class="post-title"><a href="<?php echo get_option('home'); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
+<header class="post-header" <?php post_class(); ?>>
+  <h1 class="post-title"><a href="<?php echo home_url('home'); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 
   <!-- <p class="post-date">Published <time datetime="Sat Mar 08 2014 18:51:27 GMT+0530 (UTC)">July 2015</time> <strong>by <a href="#!">John Doe</a></strong></p> -->
 </header>
 
 <?php while ( have_posts() ) : the_post(); ?>
-  <h3><?php the_title(); ?></h3>
+  <h2><?php the_title(); ?></h2>
   <?php the_content(); ?>
 <?php endwhile; // end of the loop. ?>
 
-<p class="post-date">Tags: <?php echo get_the_tag_list(); ?></p>
-
-<ul class="commentlist">
-<?php wp_list_comments( 'type=comment&callback=mytheme_comment' ); ?>
-</ul>
-
-
+<p class="post-tags"><span>Tagged:</span> <?php echo get_the_tag_list(); ?></p>
+<br>
 <footer class="post-footer clearfix">
-  <!-- <p class="post-tags"><span>Tagged:</span> <a href="/ghostwriter/tag/introductions/">Introductions</a></p> -->
+  
 
-  <!-- <div class="share">
+  <div class="share">
     <a class="icon-twitter" href="http://twitter.com/share?text=Introducing%20Ghostwriter&amp;url=http://ghost.jollygoodthemes.com/ghostwriter/introducing-ghostwriter/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <i class="fa fa-twitter"></i>
       <span class="hidden">Twitter</span>
@@ -59,8 +54,11 @@
      <i class="fa fa-google-plus"></i>
      <span class="hidden">Google+</span>
    </a>
- </div> -->
+ </div>
 </footer>
+
+<?php comment_form( $args, $post_id ); ?>
+<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
 
 </div>
 </div>
